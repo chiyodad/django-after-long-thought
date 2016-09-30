@@ -1,0 +1,15 @@
+<html>
+  <header>
+    <title> polls </title>
+  </header>
+  <body>
+    <h1> {{ question.quetion_text }}</h1>
+      <ul>
+      {% for choice in question.choice_set.all %}
+        <li> {{choice.choice_text}} : {{ choice.votes }} </li>
+      {% endfor %}
+      </ul>
+      <a href="{% url 'polls:detail' question.id %}"> 다시 투표하기</a>
+      <a href="{% url 'polls:index' %}"> 처음으로 돌아가기</a>
+  </body>
+</html>
