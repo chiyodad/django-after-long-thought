@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from .views import *
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^blog/', include('blog.urls', namespace='blog')),
+    url(r'^$', PostLV.as_view(), name="list"),
+    url(r'^post/$', PostLV.as_view(), name="list"),
+    url(r'^post/(?P<slug>[-\w]+)/$', PostDV.as_view(), name="detail"),
 ]

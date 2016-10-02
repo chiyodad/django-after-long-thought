@@ -1,0 +1,12 @@
+<header>
+  이모콘용 블로그
+</header>
+<div>
+  <ul>
+    {% for post in post_list %}
+      <li>
+        <a href="/blog/post/{{ post.slug }}" > {{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
