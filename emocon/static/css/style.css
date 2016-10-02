@@ -490,9 +490,7 @@ pre {
 .footer-copyright a:hover {
     color: #FEFEFE
 }
-body.pony {
-    background: url(../img/pony.png) #fefefe -100px -400px no-repeat
-}
+
 @media only screen and (max-width: 600px) {
     body {
         font-size: 14px
