@@ -20,5 +20,6 @@ from .views import *
 urlpatterns = [
     url(r'^$', PostLV.as_view(), name="list"),
     url(r'^post/$', PostLV.as_view(), name="list"),
-    url(r'^post/(?P<slug>[-\w]+)/$', PostDV.as_view(), name="detail"),
+    # url(r'^post/(?P<slug>[-\w]+)/$', PostDV.as_view(), name="detail"),
+    url(r'^post/(?P<slug>[-\w]+)/$', post_detail, name="detail"),
 ]

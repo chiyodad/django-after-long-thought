@@ -7,7 +7,8 @@
 {% endblock %}
 {% block content %}
  <div class="post-content">
-{{post.content}}
+{{post.content|linebreaksbr}}
  </div>
-<br/><a href="/blog"> 처음으로 </a>
+ <hr/>
+<a href="/blog"> 처음으로 </a>
 {% endblock %}
