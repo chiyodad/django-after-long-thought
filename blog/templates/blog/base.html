@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+      <title> Django Blog </title>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+      <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7604652/646302/css/fonts.css" />
+  </head>
+  <body>
+  <header class="site-header">
+    <div class="site-title-wrapper">
+      <h1 class="site-title"><a href="/"> EMOCON Blog </a></h1>
+    </div>
+  </header>
+  <div id="post-index" class="container">
+  <header class="post-header">
+    {% block header %}
+    <h1 class="post-title"> Welcome to EMOCON</h1>
+    <p class="deck">
+      이 블로그는 <a href="http://djangoproject.com/">Django</a>로 만들었습니다.
+      <br/> 이상한 모임 <a href="http://blog.weirdx.io"> 공식 블로그</a>에 놀러오세요.
+    </p>
+    {% endblock %}
+  </header>
+
+  {% block content %}
+  {% endblock %}
+  </div>
+  <br/>
+  <footer class="footer">
+    <div class="container">
+        <p class="footer-copyright">
+          &copy; chiyodad.
+          <br>Powered by <a href="http://djangoproject.com/">Django</a>.
+          <br>Theme based on <a href="https://github.com/roryg/ghostwriter">ghostwriter</a>
+          by <a href="http://jollygoodthemes.com">JollyGoodThemes</a>.
+        </p>
+    </div>
+  </footer>
+  </body>
+</html>

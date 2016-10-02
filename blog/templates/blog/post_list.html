@@ -1,12 +1,13 @@
-<header>
-  이모콘용 블로그
-</header>
-<div>
-  <ul>
+{% extends 'blog/base.html' %}
+{% block content %}
+<ol class="post-list">
     {% for post in post_list %}
-      <li>
-        <a href="/blog/post/{{ post.slug }}" > {{ post.title }}</a>
+      <li class="post-stub">
+        <a href="/blog/post/{{ post.slug }}" >
+        <h4 class="post-stub-title">{{ post.title }}</h4>
+        <time class="post-stub-date" datetime="{{ post.modify_date }}">{{ post.modify_date }}</time>
+        </a>
       </li>
     {% endfor %}
-  </ul>
-</div>
+</ol>
+{% endblock %}
